@@ -136,6 +136,25 @@ table {
     border-spacing: 0;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button, label {
+  outline: none;
+  background: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus, button:focus, label:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent, #0ea5a4);
+  outline-offset: 3px;
+}
+
 /* Clash Display Font Faces */
 @font-face {
     font-family: 'ClashDisplay';
@@ -256,6 +275,12 @@ body {
     font-size: 128px;
     text-align: center;
     user-select: none;
+    flex: 1;
+}
+
+#header label,
+#header .github {
+    width: 50px;
 }
 
 #header .github svg {
@@ -266,6 +291,12 @@ body {
 #header .menu-toggler {
     cursor: pointer;
     user-select: none;
+}
+
+#header .github a {
+    display: block;
+    margin: 0 0 0 auto;
+    max-width: fit-content;
 }
 
 /* === Sidebar === */
@@ -358,6 +389,7 @@ body {
 #footer .text {
     font-size: 0.9rem;
     color: var(--text-light-color);
+    text-align: center;
 }
 
 #footer svg {

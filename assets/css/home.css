@@ -31,20 +31,20 @@
 /* ==== Grid ==== */
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
   gap: 1.5rem;
 }
 
 .feature-card {
   background: #0f0f0f;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .feature-image {
@@ -77,7 +77,16 @@
 }
 
 @media (max-width: 901px) {
-    .feature-section {
-        padding: 3rem 2rem;
-    }
+  .feature-section {
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+
+  .feature-header {
+    max-width: 100%;
+  }
+
+  .feature-image {
+    height: 450px;
+  }
 }

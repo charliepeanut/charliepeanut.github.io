@@ -1,0 +1,435 @@
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button, label {
+  outline: none;
+  background: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus, button:focus, label:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent, #0ea5a4);
+  outline-offset: 3px;
+}
+
+/* Clash Display Font Faces */
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Extralight.woff') format('woff'),
+        url('../fonts/ClashDisplay-Extralight.ttf') format('truetype');
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Light.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Light.woff') format('woff'),
+        url('../fonts/ClashDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Regular.woff') format('woff'),
+        url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Medium.woff') format('woff'),
+        url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
+        url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Bold.woff') format('woff'),
+        url('../fonts/ClashDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'),
+        url('../fonts/ClashDisplay-Variable.woff') format('woff'),
+        url('../fonts/ClashDisplay-Variable.ttf') format('truetype');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+:root {
+    --font-heading-family: 'ClashDisplay', sans-serif;
+    --font-body-family: 'ClashDisplay', sans-serif;
+    --background-color: #ffffff;
+    --text-color: #252525;
+    --text-light-color: #999;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading-family);
+}
+
+p,
+span,
+body {
+    font-family: var(--font-body-family);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.container-large {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* HEADER */
+#header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .title {
+    font-size: 128px;
+    text-align: center;
+    user-select: none;
+    flex: 1;
+}
+
+#header label,
+#header .github {
+    width: 50px;
+}
+
+#header .github svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+#header .menu-toggler {
+    cursor: pointer;
+    user-select: none;
+}
+
+#header .github a {
+    display: block;
+    margin: 0 0 0 auto;
+    max-width: fit-content;
+}
+
+/* === Sidebar === */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40vw;
+    height: 100dvh;
+    background: #fff;
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+    padding-top: 4rem;
+    /* espaço para o header */
+    z-index: 9;
+}
+
+#sidebar .navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar .navigation li {
+    text-align: center;
+    font-size: 48px;
+}
+
+#sidebar .navigation a {
+    display: block;
+    padding: 1.5rem 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background .3s ease, color .3s ease;
+}
+
+#sidebar .menu-icon {
+    cursor: pointer;
+    display: block;
+    max-width: fit-content;
+    margin: 3rem auto;
+}
+
+#sidebar .menu-icon svg {
+    width: 4rem;
+    height: 4rem;
+}
+
+#sidebar:has(> input[type="checkbox"]:checked) {
+    transform: translateX(0);
+}
+
+/* === Checkbox hack: abrir/fechar menu === */
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked~#sidebar {
+    transform: translateX(0);
+}
+
+/* OVERLAY */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+}
+
+#sidebar:has(> input[type="checkbox"]:checked) ~ .overlay {
+    opacity: 1;
+    pointer-events: all;
+    backdrop-filter: blur(4px);
+}
+
+/* ==== Footer ==== */
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+#footer .text {
+    font-size: 0.9rem;
+    color: var(--text-light-color);
+    text-align: center;
+}
+
+#footer svg {
+    width: 2rem;
+    height: 2rem;
+    opacity: .5;
+    transition: opacity .3s ease;
+}   
+
+#footer svg:hover {
+    opacity: 1;
+}
+
+@media (max-width: 1730px) {
+    .container-large {
+        max-width: 90vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    #header .title {
+        font-size: 4rem;
+    }
+
+    #sidebar {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 615px) {
+    #header .title {
+        font-size: 2rem;
+    }
+
+    #header .github svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    #sidebar {
+        width: 100vw;
+    }
+}

@@ -1,0 +1,45 @@
+---
+    layout: layout.html
+    pagination:
+        data: collections.studies
+        size: 10
+---
+
+<div class="container" id="studies">
+    <div class="study-list-header">
+        <h2 class="study-list-title">Estudos</h2>
+    </div>
+    <ul class="studies-list">
+        {% for study in pagination.items %}
+        <li class="study">
+            <a href="{{ study.url }}">
+                <div class="study-metadata">
+                    <span class="text label">{{ study.data.label }}</span>
+                    <span class="date">{{ study.date | date: '%d.%m.%Y' }}</span>
+                </div>
+                <h3 class="study-title">{{ study.data.title }}</h3>
+                <p class="summary">{{ study.data.summary | truncatewords: 25 }}</p>
+                <div class="thumb">
+                    <img width="700" height="350" src="{{ study.data.thumb_link }}" alt="{{ study.data.title }}" {% if
+                        forloop.first %} fetchpriority="high" {% else %} loading="lazy" {% endif %} />
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {%- if pagination.pages.size > 1 -%}
+        <nav aria-labelledby="my-pagination" class="study-pagination-nav">
+            <ol>
+                {%- for pageEntry in pagination.pages %}
+                    <li>
+                        <a href="{{ pagination.hrefs[forloop.index0] }}"{% if page.url == pagination.hrefs[forloop.index0] %} aria-current="page"{% endif %}>{{ forloop.index }}</a>
+                    </li>
+                {%- endfor %}
+            </ol>
+        </nav>
+    {%- endif -%}
+</div>
+
+<style>
+    {% include 'css/studies.css' %}
+</style>

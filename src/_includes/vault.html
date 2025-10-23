@@ -1,17 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- styles with preload -->
-    <link rel="preload" as="style" href="../assets/css/index.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="./assets/css/home.css">
-    </noscript>
+    <!-- Primary site meta -->
+    <title>{{ page.title }} | Charlie Peanut</title>
+    <meta name="description"
+        content="Coleção de anotações de estudo concisas sobre catolicismo, tecnologia, linguística, etc. Encontre resumos, exemplos e referências.">
+    <meta name="author" content="Charlie Peanut (E. F.)">
+    <link rel="canonical" href="https://charliepeanut.github.io/">
+    <meta name="keywords" content="anotações, estudo, resumos, catolicismo, tecnologia, linguística">
+    <meta name="robots" content="index,follow">
 
-    <title>Charlie Peanut | Studies</title>
+    <link rel="stylesheet" href="/assets/css/bundle.css">
+    <link rel="stylesheet" href="/assets/css/reader.css">
+
+    <!-- Mobile / theme -->
+    <meta name="theme-color" content="#0ea5a4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Charlie Peanut | Studies & Portfolio">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Charlie Peanut | Studies & Portfolio">
+    <meta property="og:description" content="Coleção de anotações e resumos de estudo.">
+    <meta property="og:url" content="https://charliepeanut.github.io/">
+    <meta property="og:site_name" content="Charlie Peanut | Studies & Portfolio">
+    <meta property="og:image" content="/assets/images/vatican-banner.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Charlie Peanut | Studies & Portfolio">
+    <meta name="twitter:description" content="Coleção de anotações e resumos de estudo.">
+    <meta name="twitter:image" content="/assets/images/vatican-banner.jpg">
+
+    <!-- Favicon & PWA manifest (opcional) -->
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Accessibility / icons -->
+    <link rel="alternate" hreflang="pt-BR" href="https://charliepeanut.github.io/">
+
+    <!-- Structured data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://charliepeanut.github.io/#website",
+                "url": "https://charliepeanut.github.io/",
+                "name": "Charlie Peanut | Studies & Portfolio",
+                "description": "Coleção de anotações e resumos de estudo.",
+                "publisher": {
+                "@type": "Person",
+                "name": "Charlie Peanut (E. F.)"
+                }
+            },
+            {
+                "@type": "CollectionPage",
+                "@id": "https://charliepeanut.github.io/#collection",
+                "isPartOf": { "@id": "https://charliepeanut.github.io/#website" },
+                "name": "Anotações",
+                "description": "Página que lista todas as anotações de estudo."
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://charliepeanut.github.io/#breadcrumbs",
+                "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://charliepeanut.github.io/"}
+                ]
+            }
+            ]
+        }
+    </script>
+
 </head>
 
 <body>
@@ -41,10 +108,9 @@
         </div>
     </header>
     <main id="main-content">
-        <section class="container container-large">
-            <h1 class="section-title" style="font-size: 2rem; text-align: center;">Estudos</h1>
-            <span class="text" style="margin-top: 12px; display: block; text-align: center;">Em breve...</span>
-        </section>
+        <div id="reader" class="container">
+            {{ content }}
+        </div>
     </main>
     <footer id="footer" class="container">
         <span class="text">Si est ex hominibus consilium hoc aut opus, dissolvetur.</span>
@@ -60,7 +126,7 @@
             </svg>
         </a>
     </footer>
-        <aside id="sidebar">
+    <aside id="sidebar">
         <input type="checkbox" id="menu-toggle" name="open-menu">
         <nav class="navigation">
             <ul>
@@ -74,7 +140,7 @@
                             width="512" height="512" x="0" y="0" viewBox="0 0 64 64"
                             style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
                             <g>
-                                <path
+                                 <path
                                     d="M61.71.32 32.02 30.01 2.33.32.25 2.39l29.69 29.69L.25 61.77l2.08 2.08 29.69-29.7 29.69 29.7 2.07-2.08-29.69-29.69L63.78 2.39z"
                                     fill="#252525" opacity="1" data-original="#000000" class=""></path>
                             </g>

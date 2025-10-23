@@ -1,0 +1,118 @@
+/* ======= Títulos ======= */
+#reader {
+    --p-color: #303030;
+}
+
+#reader h1,
+#reader h2,
+#reader h3,
+#reader h4,
+#reader h5,
+#reader h6 {
+  line-height: 1.3;
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+#reader h1 {
+  font-size: 2.4rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+#reader h2 {
+  font-size: 1.9rem;
+  border-left: 4px solid #4a90e2;
+  padding-left: 0.6rem;
+}
+
+#reader h3 {
+  font-size: 1.6rem;
+}
+
+#reader h4 {
+  font-size: 1.3rem;
+}
+
+#reader h5,
+#reader h6 {
+  font-size: 1rem;
+}
+
+/* ======= Parágrafos ======= */
+#reader p {
+  margin: 1.2rem 0;
+  line-height: 1.3;
+  color: var(--p-color);
+}
+
+/* ======= Links ======= */
+#reader a {
+  text-decoration: underline;
+}
+
+/* ======= Listas ======= */
+#reader ul,
+#reader ol {
+  margin: 1.2rem 0;
+  padding-left: 2rem;
+}
+
+#reader li {
+  margin: 0.4rem 0;
+}
+
+/* ======= Citações ======= */
+#reader blockquote {
+  border-left: 4px solid #ccc;
+  background: #f9f9f9;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  font-style: italic;
+}
+
+/* ======= Código ======= */
+#reader code,
+#reader pre {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+
+#reader code {
+  padding: 0.2em 0.4em;
+  font-size: 0.95em;
+}
+
+#reader pre {
+  overflow-x: auto;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* ======= Imagens ======= */
+#reader img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 4px;
+}
+
+/* ======= Tabelas ======= */
+#reader table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.95em;
+}
+
+#reader th,
+#reader td {
+  border: 1px solid #ddd;
+  padding: 0.6rem 1rem;
+}
+
+#reader th {
+  background-color: #f3f3f3;
+  text-align: left;
+}

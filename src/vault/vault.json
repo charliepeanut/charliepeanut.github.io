@@ -1,0 +1,5 @@
+{
+  "permalink": "study/{{ page.fileSlug }}/index.html",
+  "layout": "vault.html"
+}
+ 

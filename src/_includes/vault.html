@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Primary site meta -->
-    <title>Charlie Peanut | Studies & Portfolio</title>
+    <title>{{ page.title }} | Charlie Peanut</title>
     <meta name="description"
         content="Coleção de anotações de estudo concisas sobre catolicismo, tecnologia, linguística, etc. Encontre resumos, exemplos e referências.">
     <meta name="author" content="Charlie Peanut (E. F.)">
@@ -17,6 +17,7 @@
     <meta name="robots" content="index,follow">
 
     <link rel="stylesheet" href="/assets/css/bundle.css">
+    <link rel="stylesheet" href="/assets/css/reader.css">
 
     <!-- Mobile / theme -->
     <meta name="theme-color" content="#0ea5a4">
@@ -107,129 +108,9 @@
         </div>
     </header>
     <main id="main-content">
-        
----
-  permalink: feaured.css
----
-
-<section class="feature-section container-large">
-  <div class="feature-header">
-    <h2 class="feature-title">
-      Último estudo: <span class="spotlight">Magistério</span>
-    </h2>
-    <p class="feature-description">
-      Estudo sobre o Magistério da Igreja Católica: sua definição, tipos e
-      importância para a fé e a moral. Inclui referências a documentos oficiais
-      e ensinamentos papais. Referências para aprofundamento.
-    </p>
-  </div>
-
-  <div class="feature-grid">
-    <article class="feature-card">
-      <img
-        src="/assets/images/vatican-banner.jpg"
-        alt="Estudo sobre o Magistério"
-        class="feature-image"
-        fetchpriority="high"
-        width="1800"
-        height="800"
-      />
-    </article>
-  </div>
-</section>
-
-/* ==== Feature Section ==== */
-.feature-section {
-  background: #1f1f1f;
-  color: #e2e2e2;
-  padding: 4rem 2rem;
-  margin: 3rem auto;
-}
-
-.feature-header {
-  max-width: 40%;
-  margin: 0 0 3rem;
-  text-align: left;
-}
-
-.feature-title {
-  font-size: 2.5rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.feature-title .spotlight {
-  color: var(--text-light-color)
-}
-
-.feature-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #b5b5b5;
-}
-
-/* ==== Grid ==== */
-.feature-grid {
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
-  gap: 1.5rem;
-}
-
-.feature-card {
-  background: #0f0f0f;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-.feature-image {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.feature-content {
-  padding: 1rem 1.2rem;
-}
-
-.feature-card-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 0.4rem;
-}
-
-.feature-card-text {
-  font-size: 0.95rem;
-  color: #b5b5b5;
-}
-
-/* ==== Responsividade ==== */
-@media (max-width: 1730px) {
-  .feature-header {
-    max-width: 80%;
-  }
-}
-
-@media (max-width: 901px) {
-  .feature-section {
-    padding: 2rem;
-    margin: 2rem auto;
-  }
-
-  .feature-header {
-    max-width: 100%;
-  }
-
-  .feature-image {
-    height: 450px;
-  }
-}
+        <div id="reader" class="container">
+            {{ content }}
+        </div>
     </main>
     <footer id="footer" class="container">
         <span class="text">Si est ex hominibus consilium hoc aut opus, dissolvetur.</span>

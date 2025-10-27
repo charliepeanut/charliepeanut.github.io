@@ -3,7 +3,12 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(RenderPlugin);
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+  // eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+  //   outputDir: "./_site/img/",
+  //   urlPath: "/img/",
+  //   useCache: true,
+  //   remoteAssets: "local"
+  // });
 
   eleventyConfig.setInputDirectory("src");
   eleventyConfig.setDataDirectory("./src/vault")
@@ -20,14 +25,6 @@ export default function (eleventyConfig) {
     "./src/js": "/assets/js"
   });
 
-  // Filtrando por `label`
-  // eleventyConfig.addCollection("keyMustExistInData", function (collectionsApi) {
-	// 	return collectionsApi.getAll().filter(function (item) {
-	// 		// Side-step tags and do your own filtering
-	// 		return item.data.label == filter_label
-	// 	});
-	// });
-
   // Cria uma coleção "vault" que pega tudo dentro de src/vault/
   eleventyConfig.addCollection("vault", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/vault/**/*.md");
@@ -42,4 +39,6 @@ export default function (eleventyConfig) {
 			//return b.inputPath.localeCompare(a.inputPath); // sort by path - descending
 		});
 	});
+
+
 }

@@ -234,6 +234,11 @@ a:focus, button:focus, label:focus {
     --text-light-color: #999;
 }
 
+*::selection {
+    color: var(--background-color);
+    background-color: var(--text-light-color);
+}
+
 h1,
 h2,
 h3,

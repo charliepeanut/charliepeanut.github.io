@@ -1,6 +1,6 @@
 ---
 tags: studies
-title: Estudos sobre o magistérios
+title: Estudos sobre o magistério
 thumb_link: https://imgs.search.brave.com/B-nz30ETGrEVd3wZh0Uj4QXH1ugVq0MhLUJyGitNcN8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzYzLzU3/LzMyLzYzNTczMjNk/MGM5Yjk3MWM3MTUz/ODQzZTc5MmFiYmJj/LmpwZw
 summary: Estudos e notas sobre o magistério da Igreja através de várias fontes e livros
 layout: vault.html

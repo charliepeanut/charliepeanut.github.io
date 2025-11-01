@@ -1,44 +1,31 @@
 import { RenderPlugin } from "@11ty/eleventy";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import fs from "fs";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(RenderPlugin);
-  // eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-  //   outputDir: "./_site/img/",
-  //   urlPath: "/img/",
-  //   useCache: true,
-  //   remoteAssets: "local"
-  // });
 
-  eleventyConfig.setInputDirectory("src");
-  eleventyConfig.setDataDirectory("./src/vault")
+  // Importa o site.json dentro de src/vault manualmente
+  const siteData = JSON.parse(fs.readFileSync("src/vault/site.json", "utf8"));
 
-  eleventyConfig.addPassthroughCopy({
-    "./src/css": "/assets/css"
-  });
+  // Torna o objeto "site" acessível globalmente
+  eleventyConfig.addGlobalData("site", siteData);
 
-  eleventyConfig.addPassthroughCopy({
-    "./src/fonts": "/assets/fonts"
-  });
+  // Copia assets (opcional)
+  eleventyConfig.addPassthroughCopy({ "./src/css": "/assets/css" });
+  eleventyConfig.addPassthroughCopy({ "./src/fonts": "/assets/fonts" });
+  eleventyConfig.addPassthroughCopy({ "./src/js": "/assets/js" });
 
-  eleventyConfig.addPassthroughCopy({
-    "./src/js": "/assets/js"
-  });
-
-  // Cria uma coleção "vault" que pega tudo dentro de src/vault/
+  // Coleção com todas as notas do vault
   eleventyConfig.addCollection("vault", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/vault/**/*.md");
   });
 
-	// Sort with `Array.sort`
-	eleventyConfig.addCollection("studies_by_date", function (collectionsApi) {
-		return collectionsApi.getAll().sort(function (a, b) {
-			//return a.date - b.date; // sort by date - ascending
-			if (b.date && a.date) return b.date - a.date; // sort by date - descending
-			//return a.inputPath.localeCompare(b.inputPath); // sort by path - ascending
-			//return b.inputPath.localeCompare(a.inputPath); // sort by path - descending
-		});
-	});
-
-
+  return {
+    dir: {
+      input: "src",
+      includes: "_includes",
+      output: "_site"
+    }
+  };
 }

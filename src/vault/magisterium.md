@@ -1,7 +1,7 @@
 ---
 tags: studies
 title: Estudos sobre o magistérios
-thumb_link: https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170
+thumb_link: https://imgs.search.brave.com/B-nz30ETGrEVd3wZh0Uj4QXH1ugVq0MhLUJyGitNcN8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzYzLzU3/LzMyLzYzNTczMjNk/MGM5Yjk3MWM3MTUz/ODQzZTc5MmFiYmJj/LmpwZw
 summary: Estudos e notas sobre o magistério da Igreja através de várias fontes e livros
 layout: vault.html
 label: Catolicismo
